@@ -1,7 +1,7 @@
 // 갱신 조건 (d[u] + w < d[v])에서
 // 만약 st가 포함된 그래프에서만 negative cycle detected를 하고 싶으면
 // (d[u] != INF && d[u] + w < d[v])로 바꿔 주어야함
-// 지금 코드는 분리 되어있는 그래프여도 음수 사이클을 검사함
+// 지금 코드는 서로 연결되어있지 그래프에서도 음수 사이클을 검사함
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
