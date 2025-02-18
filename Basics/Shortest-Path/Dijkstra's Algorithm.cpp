@@ -14,7 +14,8 @@ const int INF = 1e9 + 7;
 const int MAXN = 101010;
 vector<pii> adj[MAXN];
 int d[MAXN];
-void bfs(int st){
+void dijkstra(int st){
+    rep(i, MAXN) d[i] = INF;
     priority_queue<pii, vector<pii>, greater<pii>> pq;
     pq.push({d[st] = 0, st});
     while(!pq.empty()){
@@ -40,8 +41,7 @@ int main(){
         int u, v, w; cin >> u >> v >> w;
         adj[u].push_back({w, v});
     }
-    memset(d, INF, sizeof(d));
-    bfs(st);
+    dijkstra(st);
     for(int i = 1; i <= n; i++){
         cout << (d[i] != INF ? d[i] : -1) << ' ';
     }
