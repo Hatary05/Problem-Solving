@@ -17,18 +17,16 @@ struct edge{int u, v, w;};
 vector<edge> edges;
 int d[MAXN];
 bool bellman_ford(int st){
-    rep(i, MAXN) d[i] = INF;
+    fill(d + 1, d + n + 1, INF);
     d[st] = 0;
     rep(_, n - 1){
         for(auto[u, v, w] : edges){
-            if(d[u] != INF && d[u] + w < d[v]){
-                d[v] = d[u] + w;
-            }
+            if(d[u] + w < d[v]) d[v] = d[u] + w;
         }
     }
 
     for(auto[u, v, w] : edges){
-        if(d[u] != INF && d[u] + w < d[v]) return true;
+        if(d[u] + w < d[v]) return true;
     }
     return false;
 }
