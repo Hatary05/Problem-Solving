@@ -1,4 +1,4 @@
-// * n = sz(s)일때, n * (n + 1) / 2 - LCPSum = 구분되는 s의 부분문자열의 개수임.
+// *응용 n = sz(s)일때, n * (n + 1) / 2 - LCPSum = 구분되는 s의 부분문자열의 개수임.
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
