@@ -1,5 +1,5 @@
 // 집합 S의 원소들이 string s에 하나라도 부분 문자열로 존재하는지 탐색할 수 있음
-// O(집합 원소 총 길이 + s의 길이) = O(NL + M);
+// O(집합 원소 총 길이 + s의 길이 * query) = O(NL + QM);
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
