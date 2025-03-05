@@ -1,4 +1,4 @@
-//string S에서 prefix와 suffix가 일치 하는 string si에 대하여, 
+//string S에서 prefix와 suffix가 일치하는 모든 string si에 대하여, 
 //S에서 si가 몇번 나타나는지 O(n)으로 탐색 가능
 #include <bits/stdc++.h>
 using namespace std;
