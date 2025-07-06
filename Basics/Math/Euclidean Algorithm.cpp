@@ -16,3 +16,10 @@ ll gcd(ll a, ll b){
     }
     return a;
 };
+ll modinv(ll a, ll mod){
+    ll x, y;
+    if(extgcd(a, mod, x, y) != 1) return -1;
+
+    x = (x % mod + mod) % mod;
+    return x;
+}
