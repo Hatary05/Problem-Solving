@@ -1,5 +1,16 @@
-inline ll ccw(pll a, pll b, pll c) {
-    return (b.fr-a.fr)*(c.sc-a.sc) - (c.fr-a.fr)*(b.sc-a.sc);
+inline ll sgn(ll x) {return (x > 0) - (x < 0);}
+inline ll cross(pll a, pll b, pll c) {return (b.fr-a.fr)*(c.sc-a.sc) - (c.fr-a.fr)*(b.sc-a.sc);}
+inline ll ccw(pll a, pll b, pll c) {return sgn(cross(a, b, c));}
+bool seg_intersect(pll a, pll b, pll c, pll d){
+    ll ab = ccw(a,b,c) * ccw(a,b,d);
+    ll cd = ccw(c,d,a) * ccw(c,d,b);
+
+    if(ab==0 && cd==0){
+        if(a>b) swap(a,b);
+        if(c>d) swap(c,d);
+        return (a <= d && c <= b);
+    }
+    return ab<=0 && cd<=0;
 }
 vector<pll> convex_hull(vector<pll> &points) {
     sort(all(points)); compress(points);
