@@ -1,6 +1,7 @@
 inline ll sgn(ll x) {return (x > 0) - (x < 0);}
 inline ll cross(pll a, pll b, pll c) {return (b.fr-a.fr)*(c.sc-a.sc) - (c.fr-a.fr)*(b.sc-a.sc);}
 inline ll ccw(pll a, pll b, pll c) {return sgn(cross(a, b, c));}
+inline ll dist2(pll a, pll b) {return (b.fr-a.fr)*(b.fr-a.fr) + (b.sc-a.sc)*(b.sc-a.sc);}
 bool on_seg(pll a, pll b, pll p) {
     if(ccw(a, b, p) != 0) return false;
     if(a > b) swap(a, b);
