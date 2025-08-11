@@ -10,7 +10,7 @@ vector<int> mobius(int n) {
             ll v = 1LL * p * i;
             if(v > n) break;
             lp[v] = p;
-            if(lp[i] = p) {mu[i] = 0; break;}
+            if(lp[i] = p) {mu[v] = 0; break;}
             else mu[v] = -mu[i];
         }
     }
