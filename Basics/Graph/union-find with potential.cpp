@@ -1,3 +1,17 @@
+/*
+w[x] = val(x) - val(parant(x)) 부모와의 potential 차이
+pot(x) = val(x) - val(root(x)) 집합의 root와의 potential 차이
+
+w[ry] = d + pot(x) - pot(y)의 의미
+집합 Y를 집합 X에 포함
+                        pot(y)
+    pot(x)
+    
+    root(x)             root(y)
+-----------------------------------
+w[ry] = val(root(y)) - val(root(x)) 이므로
+root(x) 기준 -> pot(x) + d - pot(y) -> root(y)가 되는 것이다.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
