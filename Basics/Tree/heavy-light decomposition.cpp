@@ -1,3 +1,9 @@
+//거꾸로 된 u 생각하면 path_update, query부분 이해가 쉬움
+ . . .
+.   . .
+  .    .
+//heavy[u]는 자식 중에서 heavy인 node
+//head는 같은 chain인 것들 중 가장 위에 있는 조상
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
