@@ -1,4 +1,12 @@
 const ll root = 62;
+ll exp(ll x, ll e, ll mod) {
+    ll r = 1;
+    while(e) {
+        if(e & 1) r = r * x % mod;
+        x = x * x % mod; e >>= 1;
+    }
+    return r;
+}
 void ntt(vl &a) {
     int n = sz(a), L = 31 - __builtin_clz(n);
     static vl rt(2, 1);
